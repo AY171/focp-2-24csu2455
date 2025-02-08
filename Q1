@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,n;
+    cout<<"Enter No: ";
+    cin>>a;
+    for (n=2;n<a;n++)
+    {
+        if (a%n==0)//if the number is completely divisible
+        {
+            break;//for breaking the loop
+        }
+    }
+    if (n==a)
+    {
+        cout<<"Prime number"<<endl;//checking the number is prime.
+        while (a>2)
+        {
+            a++;
+            for (n=2;n<a;n++)
+            {
+                if (a%n==0)
+                {
+                    break;
+                }
+            }
+            if (n==a)
+            {
+                cout<<"Next Prime no. is "<<a;
+                break;
+            }
+        }
+    }
+    else
+    {
+        cout<<"Composite noumbers"<<endl<<"The Factors are:"<<endl;//finding factors of composite numbers
+        for (n=2;n<a;n++)
+        {
+            if (a%n==0)
+            {
+                cout<<n<<"";
+            }
+        }
+    }
+    return 0;
+}
